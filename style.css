@@ -394,105 +394,133 @@ body {
 /* =================== */
 /*section title  */
 /* =================== */
-
-   /* Section Container */
-  .section-heading {
-    position: relative;
-    text-align: center;
-    padding: 40px 20px;
-    background: #fff;
-    overflow: hidden;
-    max-width: 100%;
-    width: 100%;
-  margin-bottom: 30px;
-
-  }
-
-  /* Title */
-  .section-heading .title {
-    font-size: 2.5rem;
-    font-weight: 700; /
-    color: #222;
-    position: relative;
-    display: inline-block;
-    z-index: 1;
-    margin: 0;
-  margin-bottom: 12px;
-    padding:0px 100px 10px 100px;
-  }
-
-  /* Subtitle */
-  .section-heading .subtitle {
-    font-size: 1rem;
-    color: #555;
-    margin-top: 10px;
-    padding:0px 100px 10px 100px;
-  width:100% ;
+/* =================== */
+/* Section Container */
+/* =================== */
+.section-heading {
+  position: relative;
   text-align: center;
+  padding: 40px 20px;
+  background: #fff;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* =================== */
+/* Title */
+/* =================== */
+.section-heading .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+}
+
+/* =================== */
+/* Subtitle */
+/* =================== */
+.section-heading .subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 auto;
+  max-width: 620px;   /* 👈 responsive width */
+  text-align: center;
+}
+
+/* =================== */
+/* Underline */
+/* =================== */
+.section-heading .title::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* =================== */
+/* Decorative Circles */
+/* =================== */
+.section-heading::before,
+.section-heading::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.section-heading::before {
+  top: 20px;
+  left: 15px;
+}
+
+.section-heading::after {
+  bottom: 20px;
+  right: 15px;
+}
+
+/* Floating shapes */
+.section-heading .shape {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  border-radius: 50%;
+}
+
+.shape1 { top: 10px; right: 30px; }
+.shape2 { bottom: 15px; left: 40px; }
+
+/* =================== */
+/* Responsive */
+/* =================== */
+@media (max-width: 992px) {
+  .section-heading .title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    padding: 30px 15px;
   }
 
-  /* Underline with pseudo-element */
-  .section-heading .title::after {
-    content: '';
-    position: absolute;
-    width: 60%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--primary-dark));
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 2px;
+  .section-heading .title {
+    font-size: 2rem;
   }
 
-  /* Decorative Circles around section */
+  .section-heading .subtitle {
+    font-size: 0.9rem;
+  }
+
   .section-heading::before,
   .section-heading::after {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(90deg, var(--primary), var(--primary-dark));
-    border-radius: 50%;
-    z-index: 0;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-heading .title {
+    font-size: 1.6rem;
   }
 
-  .section-heading::before {
-    top: 20px;
-    left: -15px;
+  .section-heading .subtitle {
+    font-size: 0.85rem;
   }
-
-  .section-heading::after {
-    bottom: 20px;
-    right: -15px;
-  }
-
-  /* Optional small floating shapes */
-  .section-heading .shape {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: linear-gradient(90deg, var(--primary), var(--primary-dark));
-    border-radius: 50%;
-    z-index: 0;
-  }
-
-  .shape1 { top: 10px; right: 30px; }
-  .shape2 { bottom: 15px; left: 40px; }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .section-heading .title {
-      font-size: 2rem;
-    }
-    .section-heading .subtitle {
-      font-size: 0.9rem;
-    }
-    .section-heading::before,
-    .section-heading::after {
-      width: 15px;
-      height: 15px;
-    }
-  }
+}
 
 /* ===== About Section ===== */
 
@@ -834,10 +862,9 @@ height: auto;
 }
 
 .premium-growth-section .text-center .row {
-  display: flex;
+  /* display: flex;
   justify-content: center; 
-  /* border: var(--primary) dashed 2px; */
-  gap: 20px;
+  gap: 20px; */
 }
 
 .premium-title {
@@ -847,16 +874,17 @@ height: auto;
   margin-bottom: 10px;
 }
 
-.premium-growth-card{
+.premium-growth-card {
   background: #f9f9f9;
   border-radius: 15px;
-  /* padding: 30px 20px; */
   box-shadow: 0 25px 70px rgba(0,0,0,0.12);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  width: 350px;
-border: var(--primary) solid 1px;
-}
+  border: var(--primary) solid 1px;
 
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
 
 
 .premium-growth-item {
@@ -1156,12 +1184,22 @@ border: var(--primary) solid 1px;
   opacity: 0;
   transition: all 0.6s ease;
   z-index: 2;
+    pointer-events: none;
+
 }
 
-.s1 { width: 80px; height: 80px; top: -20px; left: -20px; }
-.s2 { width: 50px; height: 50px; bottom: -15px; right: -15px; }
-.s3 { width: 60px; height: 60px; top: 40%; left: -30px; }
-.s4 { width: 40px; height: 40px; top: 50%; right: -20px; }
+
+.s1 { width: 80px; height: 80px; top: 20px; left: 20px; }
+.s2 { width: 50px; height: 50px; bottom: 20px; right: 20px;}
+.s3 { width: 60px; height: 60px; top: 35%; left: 20px; }
+.s4 { width: 40px; height: 40px; top: 45%; right: 20px; }
+
+@media (max-width: 768px) {
+  .s1 { width: 50px; height: 50px; top: 15px; left: 15px; }
+  .s2 { width: 35px; height: 35px; bottom: 15px; right: 15px; }
+  .s3 { width: 40px; height: 40px; left: 15px; }
+  .s4 { width: 30px; height: 30px; right: 15px; }
+}
 
 .process-card:hover .shape {
   opacity: 1;
