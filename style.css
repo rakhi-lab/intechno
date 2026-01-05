@@ -28,6 +28,7 @@ body {
   --white: #fff;
   --border: #222;
   --primary-dark: #000e54;
+  --subtitle-light: #ffffff;
   --linear-gradient: linear-gradient(90deg, var(--primary), var(--primary-dark));
   --box-shadow: 0 10px 30px rgba(0, 181, 222, 0.4);
 
@@ -181,7 +182,7 @@ body {
   min-height: 100vh;
   background:
 
-    url("./assets/intechno/student-boy-using-laptop-learning-online-education.jpg")
+    url("./assets/intechno/hero-laptop-bg.webp")
     no-repeat center / cover;
   display: flex;
   align-items: center;
@@ -630,10 +631,6 @@ body {
   }
 }
 
-
-/* =================== */
-/*section title  */
-/* =================== */
 /* =================== */
 /* Section Container */
 /* =================== */
@@ -641,7 +638,7 @@ body {
   position: relative;
   text-align: center;
   padding: 40px 20px;
-  background: #fff;
+  background: #ffffff00;
   overflow: hidden;
   width: 100%;
   margin-bottom: 30px;
@@ -672,6 +669,14 @@ body {
   text-align: center;
 }
 
+.subtitle-light {
+  font-size: 1rem;
+  color: var(--subtitle-light);
+  margin: 0 auto;
+  max-width: 620px;   
+  text-align: center;
+  padding-bottom: 15px;
+}
 /* =================== */
 /* Underline */
 /* =================== */
@@ -768,26 +773,42 @@ body {
   width: 100%;
 filter: drop-shadow(2px 2px 16px var(--white));
 height: auto;
-
 }
 
 /* Content Layout */
 .about-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 1fr); */
   gap: 80px;
   align-items: center;
   background: var(--bg-dark);
   padding: 60px 40px;
   margin: 0px;
   width: 100%;
+
+  /* background: var(--bg-dark);
+  padding: 60px 40px; */
 }
+
+.about-content {
+  background: var(--bg-dark);
+  padding: 60px 40px;
+  margin: 0;
+  width: 100%;
+}
+
+/* spacing columns ke liye */
+.about-content > [class*="col-"] {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 
 /* Image */
 .about-image img {
   width: 100%;
   border-radius: 18px;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15); */
   transition: transform 0.4s ease;
 }
 
@@ -798,7 +819,6 @@ height: auto;
 /* Text */
 .text{
   padding: 10px 0px;
-  
 }
 
 .text h3 {
@@ -814,30 +834,31 @@ height: auto;
   content: "";
   width: 70px;
   height: 3px;
-  background: var(--white);
+  background: var(--linear-gradient);
   position: absolute;
   left: 0;
   bottom: -8px;
-  left: 250px;
+  left: 45%;
 }
+
 
 .text p {
   margin-top: 22px;
   font-size: 15px;
   line-height: 1.9;
-  color: var(--white);
+  color: var(--bg-dark);
   text-align: justify;
 }
 
 /* Button */
-.btn-premium {
+/* .btn-premium {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   margin-top: 32px;
   padding: 14px 30px;
   background: linear-gradient(135deg, #ff7a00, #ff9f1a);
-  color: #fff;
+  color: var(--white);
   border-radius: 30px;
   font-size: 14px;
   font-weight: 600;
@@ -856,7 +877,7 @@ height: auto;
 
 .btn-premium:hover i {
   transform: translateX(6px);
-}
+} */
 
 /* Responsive */
 @media (max-width: 992px) {
@@ -1249,6 +1270,7 @@ premium-card-box{
   font-size: 42px;
   font-weight: 600;
   margin-bottom: 15px;
+   color:var(--primary);
 }
 
 .section-line {
@@ -1256,7 +1278,7 @@ premium-card-box{
   width: 100px;
   height: 3px;
   background: var(--white);
-  margin: 0 auto 60px;
+  margin: 0 auto 40px;
 }
 
 .about-grid {
@@ -1674,10 +1696,6 @@ figure.snip1200.hover p {
 
 /* Services Section */
 
-
-/* ============ */
-
-
 .service-card {
   position: relative;
   height: 420px;
@@ -1707,13 +1725,15 @@ figure.snip1200.hover p {
   left: -5%;
   width: 110%;
   height: 65%;
-  background: linear-gradient(135deg, #3f5efb, #fc466b);
+  /* background: linear-gradient(135deg, #3f5efb, #fc466b); */
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
   transform: skewY(-8deg);
   border-radius: 30px;
 }
 
 .service-card.second .service-bg {
-  background: linear-gradient(135deg, #ff9800, #ffcc80);
+  /* background: linear-gradient(135deg, #ff9800, #ffcc80); */
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
 }
 
 .service-card.third .service-bg {
@@ -1744,7 +1764,8 @@ figure.snip1200.hover p {
   left: 120px;
   right: 20px;
   color: #fff;
-  z-index: 2;
+  text-align: right;
+  z-index: 10;
 }
 
 .hero-content h5 {
@@ -1755,6 +1776,7 @@ figure.snip1200.hover p {
 .hero-content p {
   font-size: 14px;
   opacity: 0.9;
+  justify-content: justify;
 }
 
 /* BUTTON */
@@ -1785,4 +1807,117 @@ figure.snip1200.hover p {
     left: 30px;
     bottom: 16%;
   }
+}
+
+
+/*  */
+
+.premium-menu-section{
+  padding:80px 20px;
+    /* background:url(https://images.unsplash.com/photo-1495195129352-aeb325a55b65?auto=format&fit=crop&w=1776&q=80); */
+    /* background-color: var(--linear-gradient); */
+  /* background-size:cover;
+  background-attachment:fixed; */
+  background: var(--bg-dark);
+}
+
+.menu-container{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.menu-card{
+  width:400px;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+}
+
+.menu-card > div{
+  box-shadow:0 15px 25px rgba(0,0,0,0.5);
+}
+
+.card-image{
+  height:250px;
+}
+
+.card-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.card-text{
+  background:#1d1c20;
+  color:#fff;
+  width:300px;
+  margin:-40px auto -50px;
+  padding:25px;
+  text-align:left;
+}
+
+.card-meal-type{
+  font-style:italic;
+  opacity:0.8;
+}
+
+.card-title{
+  font-size:2rem;
+  margin:10px 0 15px;
+}
+
+.card-body{
+  font-size:1.1rem;
+  line-height:1.6;
+}
+
+.card-price{
+  width:100px;
+  height:100px;
+  background:var(--primary);
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:2rem;
+  margin-left:auto;
+}
+
+/*  */
+.global-map-section {
+  padding: 80px 0;
+  background: #f9fbfd;
+}
+
+#world-map {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  display: block;
+}
+
+.country {
+  fill: #e5e7eb;
+  stroke: #ffffff;
+  stroke-width: 0.5;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.country:hover {
+  fill: #16a085;
+}
+
+#tooltip {
+  position: absolute;
+  background: #0a2a66;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  pointer-events: none;
+  display: none;
+  z-index: 999;
 }

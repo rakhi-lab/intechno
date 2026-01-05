@@ -8,19 +8,22 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
     rel="stylesheet"
   />
-  <link
+  <!-- <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-pVnYfOzZFV0NljrN/Fu0Olk7l59tvZoJQRYqhrWmxu55hPlkIfXqZt1HQ6z1vV+7THsThIITxBcNr4P+z9cH1w=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
-  />
+  /> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!--AOS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
   <link rel="stylesheet" href="style.css" />
@@ -87,7 +90,8 @@
 
 </header>
 
-<!-- ====================== -->
+<!-- ================= Hero Section ================= -->
+ <main>
 <section class="ase-hero">
   <!-- Floating Tags -->
   <span class="float-tag tag-left">Website Design</span>
@@ -126,7 +130,7 @@
     </div>
   </div>
 </section>
-
+</main>
 
 
   <!-- Hero Section -->
@@ -176,7 +180,7 @@
     <!-- Card 1 -->
     <div class="process-card">
       <div class="icon-box">
-        <img src="assets/intechno/research.png" alt="Research">
+        <img src="assets/intechno/research.webp" alt="Research" loading="lazy">
       </div>
       <h4>Research</h4>
       <p>We analyze business requirements and market trends for better results.</p>
@@ -190,7 +194,7 @@
     <!-- Card 2 -->
     <div class="process-card">
       <div class="icon-box">
-        <img src="assets/intechno/devloper.png" alt="Design">
+        <img src="assets/intechno/devloper.webp" alt="Design"  loading="lazy">
       </div>
       <h4>Design</h4>
       <p>User-centric UI/UX designs that strengthen brand identity.</p>
@@ -204,7 +208,7 @@
     <!-- Card 3 -->
     <div class="process-card">
       <div class="icon-box">
-        <img src="assets/intechno/devloper-img.png" alt="Develop">
+        <img src="assets/intechno/devloper-img.webp" alt="Develop" loading="lazy">
       </div>
       <h4>Develop</h4>
       <p>Scalable and high-performance solutions built with modern technologies.</p>
@@ -218,7 +222,7 @@
     <!-- Card 4 -->
     <div class="process-card">
       <div class="icon-box">
-        <img src="assets/intechno/9098082-removebg-preview.png" alt="Ideas">
+        <img src="assets/intechno/bulb-idea.webp" alt="Ideas" loading="lazy">
       </div>
       <h4>Unique Ideas</h4>
       <p>Innovative strategies that help your business stand out.</p>
@@ -318,6 +322,7 @@
 </section>
 
 <!-- About US -->
+
 <section class="about-content-section">
   <div class="section-heading container" data-aos="fade-down" data-aos-duration="1000">
     <h2 class="title">Know About Intechno Software</h2>
@@ -327,26 +332,35 @@
     <div class="shape shape2"></div>
   </div>
 
-  <div class="about-content container-fluid d-flex align-items-center flex-wrap">
+<div class="container gap-2">
+  <div class="row align-items-center">
 
-    <!-- About Image -->
-    <div class="about-image" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-      <img src="assets/intechno/about-img.png" alt="About Us Image">
+    <!-- Image -->
+    <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
+      <div class="about-image text-center">
+        <img src="assets/intechno/about-img.webp"
+             alt="About Intechno Software"
+             class="img-fluid">
+      </div>
     </div>
 
-    <!-- About Text -->
-    <div class="text" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-      <h3>Who We Are</h3>
-      <p>
-      INTECHNO SOFTWARE PRIVATE LIMITED is a leading and well known IT company based in India that provides the quality services and solutions to its clients and customers by development design and implementing solutions. We provide our best IT Services around the globe including Web Design & Development, E-commerce Application Development, Search Engine Optimization, Pay per click advertising, and well known to provide the world-class customer support in the industry. We believe that to reap the benefits of offshore outsourcing, you must remain in control of the system. Our approach to service pays due attention to partnership and is focused on the key elements. It ensures a long-term, efficient offshore outsourcing strategy for our customers.
-      </p>
+    <!-- Text -->
+    <div class="col-lg-6 col-md-6 col-12">
+      <div class="text">
+        <h3>Who We Are</h3>
+        <p>
+          INTECHNO SOFTWARE PRIVATE LIMITED is a leading and well known IT company based in India that provides the quality services and solutions to its clients and customers by development design and implementing solutions. We provide our best IT Services around the globe including Web Design & Development, E-commerce Application Development, Search Engine Optimization, Pay per click advertising, and well known to provide the world-class customer support in the industry. We believe that to reap the benefits of offshore outsourcing, you must remain in control of the system. Our approach to service pays due attention to partnership and is focused on the key elements. It ensures a long-term, efficient offshore outsourcing strategy for our customers.
+        </p>
 
-      <a href="#" class="btn-premium">
-        Read More <i class="fa-solid fa-arrow-right"></i>
-      </a>
+        <a href="#" class="btn-premium">
+          Read More <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
     </div>
 
   </div>
+</div>
+
 </section>
 
 
@@ -407,7 +421,7 @@
 <section class="premium-growth-section">
  
   <div class="section-heading container">
-    <span class="premium-subtitle d-flex justify-content-start">DRIVING SUCCESS</span>
+    <span class="premium-subtitle justify-content-start">DRIVING SUCCESS</span>
     <br>
     <h2 class="title">Optimise Savings for Exponential Growth</h2>
 
@@ -499,11 +513,11 @@
 
 
 
-
 <!-- Industries We Serve -->
 <section class="industries-section">
   <div class="section-heading container">
     <span class="premium-subtitle">Industries We Serve</span>
+  </br>
     <h2 class="title">Industries We Serve</h2>
     <p class="subtitle">
       We have a team of experts to provide Web & mobile solutions, eCommerce for the following industries. Find your industry and let's discuss!
@@ -674,10 +688,6 @@
 
 <!-- Our Services -->
 
-
-<!--  -->
-
-
 <section class="services-hero-section py-5">
   <div class="container">
   <!-- Section Heading -->
@@ -698,7 +708,7 @@
       <!-- CARD -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card">
-          <img class="service-img" src="https://cdn.gamer-network.net/2018/metabomb/leagueoflegendsbestcarrychampions2018pantheon.jpg" alt="">
+          <img class="service-img" src="./assets/intechno/UI-UX.jpg" alt="">
           
           <div class="service-bg"></div>
 
@@ -706,7 +716,7 @@
             <i class="fa-solid fa-code"></i>
           </div>
 
-          <div class="service-content">
+          <div class="hero-content">
             <h5>Web Development</h5>
             <p>High-performance and scalable websites using modern tech.</p>
           </div>
@@ -718,7 +728,7 @@
       <!-- CARD -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card second">
-          <img class="service-img" src="https://i.pinimg.com/originals/9f/b1/ff/9fb1ffb05dd28039d1a06ad8e90cbd75.jpg" alt="">
+          <img class="service-img" src="./assets/intechno/app-development.jpg" alt="">
           
           <div class="service-bg"></div>
 
@@ -726,8 +736,8 @@
             <i class="fa-solid fa-mobile-screen-button"></i>
           </div>
 
-          <div class="service-content">
-            <h5>Mobile App Development</h5>
+          <div class="hero-content">
+            <h5 class="">Mobile App Development</h5>
             <p>Native & cross-platform apps with smooth UX.</p>
           </div>
 
@@ -738,7 +748,7 @@
       <!-- CARD -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card third">
-          <img class="service-img" src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70" alt="">
+          <img class="service-img" src="assets/intechno/ui-ux-img.jpg" alt="">
           
           <div class="service-bg"></div>
 
@@ -746,7 +756,7 @@
             <i class="fa-solid fa-pen-nib"></i>
           </div>
 
-          <div class="service-content">
+          <div class="hero-content">
             <h5>UI / UX Design</h5>
             <p>User-centric interfaces that convert visitors.</p>
           </div>
@@ -758,6 +768,288 @@
     </div>
   </div>
 </section>
+
+<!-- section -->
+<section class="process-section">
+
+        <div class="section-heading container">
+  <h2 class="title">Our Work Process</h2>
+  <p class="subtitle">A clear and structured approach to turn your ideas into powerful solutions.</p>
+  <!-- Optional small shapes -->
+  <div class="shape shape1"></div>
+  <div class="shape shape2"></div>
+    </div>
+
+  <div class="container process-grid">
+
+    <!-- Card 1 -->
+    <div class="process-card">
+      <div class="icon-box">
+        <img src="assets/intechno/research.webp" alt="Research" loading="lazy">
+      </div>
+      <h4>Analyze</h4>
+      <p> We analyze website performance, SEO, traffic, competition, and business goals to understand exact requirements.</p>
+      <a href="#" class="read-btn">Read More</a>
+      <span class="shape s1"></span>
+      <span class="shape s2"></span>
+      <span class="shape s3"></span>
+      <span class="shape s4"></span>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="process-card">
+      <div class="icon-box">
+        <img src="assets/intechno/devloper.webp" alt="Design"  loading="lazy">
+      </div>
+      <h4>Strategize</h4>
+      <p>Based on research and insights, we build result-driven strategies to improve visibility and online growth.</p>
+      <a href="#" class="read-btn">Read More</a>
+      <span class="shape s1"></span>
+      <span class="shape s2"></span>
+      <span class="shape s3"></span>
+      <span class="shape s4"></span>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="process-card">
+      <div class="icon-box">
+        <img src="assets/intechno/devloper-img.webp" alt="Develop" loading="lazy">
+      </div>
+      <h4>Execute</h4>
+      <p> Our experts execute the strategy efficiently to deliver measurable
+            and long-term business results.</p>
+      <a href="#" class="read-btn">Read More</a>
+      <span class="shape s1"></span>
+      <span class="shape s2"></span>
+      <span class="shape s3"></span>
+      <span class="shape s4"></span>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="process-card">
+      <div class="icon-box">
+        <img src="assets/intechno/bulb-idea.webp" alt="Ideas" loading="lazy">
+      </div>
+      <h4>Unique Ideas</h4>
+      <p>Innovative strategies that help your business stand out.</p>
+      <a href="#" class="read-btn">Read More</a>
+      <span class="shape s1"></span>
+      <span class="shape s2"></span>
+      <span class="shape s3"></span>
+      <span class="shape s4"></span>
+    </div>
+
+  </div>
+</section>
+
+
+<!--  -->
+<section class="premium-menu-section">
+  
+  <div class=" container">
+    <h2 class="section-title">Our Global Delivery Process</h2>
+    <p class="section-line"></p>
+
+    <p class="subtitle-light">A systematic approach to deliver high-quality solutions on time and within budget.</p>
+    <br>
+  </div>
+
+  <div class="menu-container">
+
+    <!-- Card 1 -->
+    <div class="menu-card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=80" alt="Discovery">
+      </div>
+      <div class="card-text">
+        <p class="card-meal-type">Step 01 / Discovery</p>
+        <h3 class="card-title">Analyze & Research</h3>
+        <p class="card-body">
+          We understand your business goals, target audience, competitors, and technical needs to define clear objectives.
+        </p>
+      </div>
+      <div class="card-price">01</div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="menu-card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80" alt="Planning">
+      </div>
+      <div class="card-text">
+        <p class="card-meal-type">Step 02 / Planning</p>
+        <h3 class="card-title">Strategy & Roadmap</h3>
+        <p class="card-body">
+          We create a detailed roadmap, timelines, and technical architecture aligned with your long-term vision.
+        </p>
+      </div>
+      <div class="card-price">02</div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="menu-card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=1400&q=80" alt="Design">
+      </div>
+      <div class="card-text">
+        <p class="card-meal-type">Step 03 / Design</p>
+        <h3 class="card-title">UI / UX Design</h3>
+        <p class="card-body">
+          User-focused designs crafted for performance, usability, and conversion across all devices.
+        </p>
+      </div>
+      <div class="card-price">03</div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="menu-card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=80" alt="Development">
+      </div>
+      <div class="card-text">
+        <p class="card-meal-type">Step 04 / Development</p>
+        <h3 class="card-title">Build & Integrate</h3>
+        <p class="card-body">
+          Our developers build secure, scalable solutions using modern technologies and best coding practices.
+        </p>
+      </div>
+      <div class="card-price">04</div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="menu-card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1581091012184-7e0cdfbb6797?auto=format&fit=crop&w=1400&q=80" alt="Testing">
+      </div>
+      <div class="card-text">
+        <p class="card-meal-type">Step 05 / Testing</p>
+        <h3 class="card-title">Quality Assurance</h3>
+        <p class="card-body">
+          Rigorous testing ensures performance, security, and reliability before the final release.
+        </p>
+      </div>
+      <div class="card-price">05</div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="menu-card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1400&q=80" alt="Launch">
+      </div>
+      <div class="card-text">
+        <p class="card-meal-type">Step 06 / Delivery</p>
+        <h3 class="card-title">Launch & Support</h3>
+        <p class="card-body">
+          Smooth deployment with continuous monitoring, maintenance, and long-term technical support.
+        </p>
+      </div>
+      <div class="card-price">06</div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Map Section -->
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/gh/linuxguist/files@main/maps.css" rel="stylesheet">
+
+
+    
+<section class="content-row">
+        <div class="container">
+           <div class="section-heading container">
+  <h2 class="title">Our Work Process</h2>
+  <p class="subtitle">A clear and structured approach to turn your ideas into powerful solutions.</p>
+  <!-- Optional small shapes -->
+  <div class="shape shape1"></div>
+  <div class="shape shape2"></div>
+    </div>
+
+            <header class="content-header">
+                <center>
+
+                </center>
+                <br>
+                <br>
+            
+                <br>
+                <br>                
+            </header>
+            <div class="network-map">
+            <ul>
+                <li style="top: 38%; left: 12.5%;">
+                    <span class="label-top-left">Oregon</span>
+                </li>
+                <li style="top: 40%; left: 26%;">
+                    <span class="label-bottom-right">N. Virginia</span>
+                </li>
+                <li style="top: 78%; left: 34%;">
+                    <span class="label-bottom-right">Sao Paulo</span>
+                </li>
+                <li style="top: 31.8%; left: 44.7%;">
+                    <span class="label-bottom-left">Ireland</span>
+                </li>
+                <li style="top: 31.8%; left: 46.7%;">
+                    <span class="label-top-right">London</span>
+                </li>
+                <li style="top: 34%; left: 49.5%;">
+                    <span class="label-bottom-right">Frankfurt</span>
+                </li>
+                <li style="top: 64%; left: 75%;">
+                    <span class="label-bottom-left">Singapore</span>
+                </li>
+                <li style="top: 42%; left: 82%;">
+                    <span class="label-top-right">Seoul</span>
+                </li>
+                <li style="top: 54%; left: 68.5%;">
+                    <span class="label-top-right">Hyderabad</span>
+                </li>
+                <li style="top: 83.5%; left: 52%;">
+                    <span class="label-top-right">Cape Town</span>
+                </li>
+                <li style="top: 83%; left: 89%;">
+                    <span class="label-top-right">Sydney</span>
+                </li>
+                <li style="top: 35%; left: 27%;">
+                    <span class="label-top-right">Montreal</span>
+                </li>
+            </ul>
+            <img src="https://cdn.jsdelivr.net/gh/linuxguist/files@main/maps.svg" alt="">
+        </div>
+
+        </div>
+    </section>
+
+
+  <section class="global-map-section">
+  <div class="container text-center">
+    <h2 class="title">We Work With Clients Worldwide</h2>
+    <p class="subtitle">Delivering trusted IT solutions across the globe</p>
+
+    <div class="map-wrapper">
+      <svg
+        id="world-map"
+        viewBox="0 0 2000 1001"
+        xmlns="http://www.w3.org/2000/svg"
+        
+      >
+        <!-- Example Countries -->
+        <path class="country" data-name="India"
+          d="M1366,574L1375,579L1384,586L1394,589L1404,585L1410,575L1408,565L1396,557L1385,553L1372,556Z"/>
+        
+        <path class="country" data-name="United States"
+          d="M184,373L200,366L218,362L239,366L262,375L280,382L289,392L276,400L253,404L230,399Z"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div id="tooltip"></div>
+
+
+
 
 <!-- ======= FOOTER ======= -->
 
