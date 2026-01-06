@@ -43,17 +43,4 @@ document.querySelectorAll(".wow-card").forEach(card => {
   });
 });
 
-// map
-const tooltip = document.getElementById("tooltip");
-
-document.querySelectorAll(".country").forEach(c => {
-  c.addEventListener("mousemove", e => {
-    tooltip.style.display = "block";
-    tooltip.innerHTML = c.dataset.name;
-    tooltip.style.left = e.pageX + 15 + "px";
-    tooltip.style.top = e.pageY + 15 + "px";
-  });
-  c.addEventListener("mouseleave", () => {
-    tooltip.style.display = "none";
-  });
-});
+// caresoul
