@@ -1123,18 +1123,20 @@ height: auto;
 }
 
 premium-card-box{
-  display: flex;
-  flex-direction: column;
+    display: flex;
+  justify-content: center;
 }
 
 .premium-card {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
+  justify-items: center;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 25px 70px rgba(0,0,0,0.12);
   padding: 40px 0;
   gap: 30px;
+
 }
 
 .premium-title {
@@ -1152,6 +1154,7 @@ premium-card-box{
   border: 1px solid var(--primary);
   width: 100%;
   max-width: 350px;
+  margin: 20px;
 }
 
 .premium-growth-item {
@@ -1407,8 +1410,8 @@ premium-card-box{
 
 /* Icon Box */
 .icon-box {
-  width: 90px;
-  height: 90px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto 25px;
   border-radius: 50%;
   background: #f2f5fb;
@@ -1425,7 +1428,7 @@ premium-card-box{
 }
 
 .icon-box img {
-  width: 90px;
+  width: 100%;
 }
 
 /* Text */
@@ -1533,7 +1536,7 @@ premium-card-box{
   }
 
   .icon-box img {
-    width: 35px;
+    width: 100%;
   }
 
   .process-card h4 {
@@ -2159,17 +2162,40 @@ figure.snip1200.hover p {
 
 /* about-stats-section */
 
-.about-stats-section {
+/* .about-stats-section {
   background: var(--bg-dark);
+  background: url(assets/svg/bg1.jpg);
+  background-attachment: fixed;
+ 
   color: #fff;
   padding: 90px 20px;
   font-family: 'Segoe UI', sans-serif;
+} */
+
+.about-stats-section {
+  position: relative;
+  background-image: url("assets/svg/bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* optional */
+  color: #fff;
+  padding: 90px 20px;
 }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
+.about-stats-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 0;
 }
+
+.about-stats-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
 
 .content-grid {
   display: grid;
@@ -2217,7 +2243,7 @@ figure.snip1200.hover p {
 
 .stat-box p {
   font-size: 14px;
-  color: #bbb;
+  color: var(--white);
 }
 
 /* BUTTON */
