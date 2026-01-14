@@ -2,150 +2,257 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Global Presence Section</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Premium Testimonial Slider</title>
 
+<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <style>
-/* ===== GLOBAL PRESENCE SECTION ===== */
-.global-presence{
-  background:#f8fcfb;
-  padding:100px 0;
-  position:relative;
-  overflow:hidden;
+/* ================== SECTION ================== */
+.testimonial-slider {
+  position: relative;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  padding: 4rem 2rem;
+  overflow: hidden;
 }
 
-/* HEADING */
-.global-heading{
-  text-align:center;
-  max-width:900px;
-  margin:0 auto 70px;
+/* SVG BACKGROUND SHAPES */
+.testimonial-slider::before,
+.testimonial-slider::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
+  border-radius: 50%;
 }
-.global-heading span{
-  color:#16a085;
-  font-weight:600;
-  letter-spacing:1px;
+.testimonial-slider::before {
+  top: -150px;
+  left: -150px;
 }
-.global-heading h2{
-  font-size:42px;
-  font-weight:800;
-  color:#0a2a66;
-  margin:15px 0;
-}
-.global-heading p{
-  font-size:16px;
-  color:#555;
+.testimonial-slider::after {
+  bottom: -150px;
+  right: -150px;
 }
 
-/* MAP WRAPPER */
-.map-holder{
-  position:relative;
-  max-width:1200px;
-  margin:auto;
+/* ================== TITLE ================== */
+.testimonial-title {
+  color: #fff;
+}
+.testimonial-title h2 {
+  font-weight: 700;
+}
+.quote-svg {
+  width: 60px;
+  opacity: 0.15;
 }
 
-/* SVG MAP */
-.world-map{
-  width:100%;
-  height:auto;
+/* ================== CARDS ================== */
+.carousel-inner {
+  display: flex;
+  overflow-x: hidden;
 }
-.country{
-  fill:#e3e8e6;
-  stroke:#ffffff;
-  stroke-width:0.6;
-  cursor:pointer;
-  transition:all .3s ease;
-}
-.country:hover{
-  fill:#16a085;
+.carousel-item {
+  flex: 0 0 50%;
 }
 
-/* TOOLTIP */
-.map-tooltip{
-  position:absolute;
-  background:#0a2a66;
-  color:#fff;
-  padding:6px 16px;
-  border-radius:20px;
-  font-size:13px;
-  opacity:0;
-  pointer-events:none;
-  transform:translate(-50%,-120%);
-  transition:.2s ease;
-  white-space:nowrap;
-  z-index:10;
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border: none;
+  border-radius: 1.2rem;
+  margin: 0 0.75rem;
+  padding: 1.8rem 1.5rem;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* IMAGE */
+.card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+  margin-bottom: 1rem;
+}
+
+/* TEXT */
+.card h5 {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.card small {
+  color: #94a3b8;
+}
+.card p {
+  font-size: 0.95rem;
+  color: #e5e7eb;
+}
+
+/* RATING */
+.rating i {
+  color: #facc15;
+}
+
+/* ================== CONTROLS ================== */
+.carousel-control-prev,
+.carousel-control-next {
+  background: rgba(255,255,255,0.15);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  bottom: 0;
+  top: auto;
+  transform: translateY(50%);
+}
+.carousel-control-prev {
+  left: 0;
+}
+.carousel-control-next {
+  left: 4rem;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: #38bdf8;
+}
+
+/* ================== MOBILE ================== */
+@media (max-width: 575px) {
+  .carousel-item {
+    flex: 0 0 100%;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<section class="global-presence">
-  <div class="container">
+<div class="testimonial-slider">
+  <div class="container-fluid">
+    <div class="row align-items-center">
 
-    <div class="global-heading">
-      <span>OUR CLIENTS</span>
-      <h2>With Our Clients You’ll Be in a Good Company<br>We Work With 500+ Global Brands</h2>
-      <p>
-        We proudly serve businesses across the globe, delivering enterprise-grade
-        IT solutions trusted by companies worldwide.
-      </p>
+      <!-- LEFT -->
+      <div class="col-md-4 text-white mb-4 mb-md-0">
+        <svg class="quote-svg" viewBox="0 0 24 24" fill="white">
+          <path d="M7 17h4v-7H5v6c0 1.1.9 1 2 1zm8 0h4v-7h-6v6c0 1.1.9 1 2 1z"/>
+        </svg>
+        <h2 class="mt-3">What our customers say</h2>
+        <p class="text-secondary">Real stories from real users.</p>
+
+        <button class="carousel-control-prev" type="button">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col-md-8">
+        <div class="carousel-inner">
+
+          <!-- CARD -->
+          <div class="carousel-item active">
+            <div class="card text-center">
+              <img src="https://codingyaar.com/wp-content/uploads/headshot-1-scaled.jpg">
+              <h5>Rohit Sharma</h5>
+              <small>CEO, TechWave</small>
+              <div class="rating my-2">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <p>Absolutely loved the experience. Clean UI and smooth animations.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card text-center">
+              <img src="https://codingyaar.com/wp-content/uploads/headshot-2-scaled.jpg">
+              <h5>Anita Verma</h5>
+              <small>Product Manager</small>
+              <div class="rating my-2">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p>Feels premium and very intuitive. Highly recommended!</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card text-center">
+              <img src="https://codingyaar.com/wp-content/uploads/headshot-3-scaled.jpg">
+              <h5>Mohit Jain</h5>
+              <small>Startup Founder</small>
+              <div class="rating my-2">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <p>This testimonial section boosted our conversions instantly.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
-
-    <div class="map-holder">
-      <div class="map-tooltip" id="mapTooltip"></div>
-
-      <!-- FULL WORLD MAP SVG -->
-      <svg class="world-map" viewBox="0 0 2000 1001" xmlns="http://www.w3.org/2000/svg">
-
-        <!-- NORTH AMERICA -->
-        <path class="country" data-name="Canada" d="M230,180l260,-40l60,60l-110,70l-200,-20z"/>
-        <path class="country" data-name="United States" d="M300,300l320,20l-60,90l-250,-30z"/>
-        <path class="country" data-name="Mexico" d="M340,420l150,40l-40,60l-130,-40z"/>
-
-        <!-- SOUTH AMERICA -->
-        <path class="country" data-name="Brazil" d="M540,540l200,40l-40,200l-180,-50z"/>
-        <path class="country" data-name="Argentina" d="M600,760l120,40l-30,140l-110,-40z"/>
-
-        <!-- EUROPE -->
-        <path class="country" data-name="United Kingdom" d="M900,260l40,20l-15,40l-40,-15z"/>
-        <path class="country" data-name="France" d="M940,320l80,30l-30,60l-80,-30z"/>
-        <path class="country" data-name="Germany" d="M1020,300l70,30l-25,60l-70,-30z"/>
-        <path class="country" data-name="Russia" d="M1050,200l500,40l-40,120l-480,-60z"/>
-
-        <!-- AFRICA -->
-        <movie>
-        <path class="country" data-name="Egypt" d="M1020,450l70,20l-20,60l-70,-20z"/>
-        <path class="country" data-name="South Africa" d="M1000,780l140,40l-40,90l-130,-40z"/>
-
-        <!-- ASIA -->
-        <path class="country" data-name="India" d="M1300,450l120,40l-50,100l-110,-40z"/>
-        <path class="country" data-name="China" d="M1400,380l300,60l-60,140l-280,-70z"/>
-        <path class="country" data-name="Japan" d="M1750,420l30,30l-10,40l-30,-30z"/>
-
-        <!-- AUSTRALIA -->
-        <path class="country" data-name="Australia" d="M1500,760l300,80l-80,120l-280,-90z"/>
-
-      </svg>
-    </div>
-
   </div>
-</section>
+</div>
 
 <script>
-const tooltip = document.getElementById("mapTooltip");
+$(function () {
 
-document.querySelectorAll(".country").forEach(country => {
-  country.addEventListener("mousemove", e => {
-    tooltip.style.left = e.pageX + "px";
-    tooltip.style.top = e.pageY + "px";
-    tooltip.style.opacity = 1;
-    tooltip.innerHTML = country.dataset.name;
+  let carouselInner = $(".carousel-inner");
+  let cardWidth = $(".carousel-item").outerWidth(true);
+  let scrollPosition = 0;
+  let autoScroll;
+
+  function startAutoScroll() {
+    autoScroll = setInterval(() => {
+      if (scrollPosition < carouselInner[0].scrollWidth - cardWidth * 2) {
+        scrollPosition += cardWidth;
+      } else {
+        scrollPosition = 0;
+      }
+      carouselInner.animate({ scrollLeft: scrollPosition }, 700);
+    }, 3000);
+  }
+
+  function stopAutoScroll() {
+    clearInterval(autoScroll);
+  }
+
+  startAutoScroll();
+
+  $(".carousel-control-next").click(() => {
+    stopAutoScroll();
+    scrollPosition += cardWidth;
+    carouselInner.animate({ scrollLeft: scrollPosition }, 700);
+    startAutoScroll();
   });
-  country.addEventListener("mouseleave", () => {
-    tooltip.style.opacity = 0;
+
+  $(".carousel-control-prev").click(() => {
+    stopAutoScroll();
+    scrollPosition -= cardWidth;
+    if (scrollPosition < 0) scrollPosition = 0;
+    carouselInner.animate({ scrollLeft: scrollPosition }, 700);
+    startAutoScroll();
   });
+
+  carouselInner.hover(stopAutoScroll, startAutoScroll);
 });
 </script>
 
